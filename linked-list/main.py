@@ -17,3 +17,6 @@ class LinkedList:
         else:
             self.tail = new_node
             self.head = new_node
+
+    def remove_at_beginning(self):
+        self.head = self.head.next
