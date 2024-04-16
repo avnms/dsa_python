@@ -26,3 +26,9 @@ class Queue:
 
             if self.head == None:
                 self.tail = None
+            return current_node.data
+
+        return None
+
+    def has_elements(self):
+        return self.head != None
