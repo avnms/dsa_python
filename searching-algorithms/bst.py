@@ -42,7 +42,6 @@ class BinarySearchTree:
                 current_node = current_node.left_child
             else:
                 current_node = current_node.right_child
-
         return False
 
     def find_min(self):
@@ -51,6 +50,16 @@ class BinarySearchTree:
             current_node = current_node.left_child
 
         return current_node.data
+
+    def in_order(self, current_node):
+        # Check if current_node exists
+        if current_node:
+            # Call recursively with the left half of the tree
+            self.in_order(current_node.left_child)
+            # Print the value of the current_node
+            print(current_node.data)
+            # Call recursively with the right half of the tree
+            self.in_order(current_node.right_child)
 
 
 if __name__ == "__main__":
