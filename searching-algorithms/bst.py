@@ -45,8 +45,16 @@ class BinarySearchTree:
 
         return False
 
+    def find_min(self):
+        current_node = self.root
+        while current_node.left_child:
+            current_node = current_node.left_child
+
+        return current_node.data
+
 
 if __name__ == "__main__":
     bst = BinarySearchTree()
     bst.insert("Pride and Prejudice")
     print(bst.search("Pride and Prejudice"))
+    print(bst.find_min())
